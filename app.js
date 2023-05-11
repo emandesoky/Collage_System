@@ -41,6 +41,15 @@ app.get("/admin_home", (req, res) => {
 app.get("/upload", (req, res) => {
   res.render("upload")
 });
+app.get("/add_doctor", (req, res) => {
+  res.render("add_doctor")
+});
+app.get("/add_department", (req, res) => {
+  res.render("add_department")
+});
+app.get("/add_cource", (req, res) => {
+  res.render("add_material")
+});
 ///404 error
 app.use((req, res) => {
     res.status(404).send("sorry can't find that!")
