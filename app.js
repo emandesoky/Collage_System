@@ -67,6 +67,17 @@ app.get("/add_department", (req, res) => {
 app.get("/add_cource", (req, res) => {
   res.render("add_material")
 });
+app.get("/add_student", (req, res) => {
+  res.render("add_student")
+});
+
+app.get("/absence", (req, res) => {
+  res.render("absense")
+});
+app.get("/display_cources", (req, res) => {
+  res.render("display_cources")
+});
+
 
 ///404 error
 app.use((req, res) => {

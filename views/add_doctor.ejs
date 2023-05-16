@@ -33,37 +33,47 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-right: 60px;">
             <li class="nav-item active">
-                <a class="nav-link p-2 p-lg-3" href="/views/Home.html">Home </a>
+                <a class="nav-link p-2 p-lg-3" href="/">Home </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link p-2 p-lg-3" href="#">Add Doctor</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link p-2 p-lg-3" href="/views/Home.html">About</a>
+                <a class="nav-link p-2 p-lg-3" href="/add_student">Add Student</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="/add_cource">Add Course</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link p-2 p-lg-3" href="/views/add_material.ejs">Add Course</a>
+                <a class="nav-link p-2 p-lg-3" href="/add_department">Add Department</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link p-2 p-lg-3" href="/views/add_Department.ejs">Add Department</a>
+                <a class="nav-link p-2 p-lg-3" href="/admin_home">Admin Information</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link p-2 p-lg-3" href="/views/admin_home.ejs">Admin Information</a>
+                            <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="/absence">Generate The Absence</a>
             </li>
-            
     </div>
 </nav> 
-    <form action="/login" method="post">
+    <form action="" method="post">
         <div class="form col">
             <div
                 style="border:1px solid  #c9e3da;;border-radius: 20px;padding: 13px;   padding-left: 0px;  height: auto;">
                 <div class="cform">
                     <h1>Add Doctor </h1>
-                    <label for="name" style="font-style: italic;">Name </label> <br> <br>
+                    <label for="name" style="font-style: italic;">First Name </label> <br> <br>
                     <input placeholder="Enter Username" style="font-style: italic;" type="text" id="name" />
                 </div>
                 <div class="cform">
-                    <i class="bi bi-lock-fill" style="width: 15px; color: white;"></i>
+                    <label for="name" style="font-style: italic;">Last Name </label> <br> <br>
+                    <input placeholder="Enter Username" style="font-style: italic;" type="text" id="name" />
+                </div>
+                <div class="cform">
+                    <label for="id" style="font-style: italic;">Email</label><br> <br>
+                    <input placeholder="Enter your id " style="font-style: italic;" type="text" id="id" />
+                </div>
+                <div class="cform">
                     <label for="pass" style="font-style: italic;">Password</label><br> <br>
                     <input placeholder="Enter password " style="font-style: italic;" type="password" id="pass" />
                 </div>
