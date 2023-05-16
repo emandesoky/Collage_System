@@ -74,8 +74,9 @@ app.get("/add_student", (req, res) => {
 app.get("/absence", (req, res) => {
   res.render("absense")
 });
-app.get("/display_cources", (req, res) => {
-  res.render("display_cources")
+
+app.get("/display_course", (req, res) => {
+  res.render("display_course")
 });
 
 

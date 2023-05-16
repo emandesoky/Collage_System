@@ -15,7 +15,7 @@ body {
     background-size: cover;
     background-position: center;
     width: 200wh;
-    height: auto;
+    height: 100vh;
     /* padding-top: 10px; */
 }
 
@@ -114,5 +114,11 @@ div.buttom {
     margin-right: 21px;
     width: 100px;
     border-color: #c9e3da;
+    text-decoration: none;
+
+}
+.buttom input:hover{
+    color: #77686d;
+    transform: scale(1.1);
 
 }
