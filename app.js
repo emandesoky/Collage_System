@@ -101,6 +101,15 @@ app.get("/display_course", (req, res) => {
   res.render("display_course")
 });
 
+app.get("/download_course", (req, res) => {
+  res.render("download_course")
+});
+
+app.get("/enroll_course", (req, res) => {
+  res.render("enroll_course")
+});
+
+
 ///404 error
 app.use((req, res) => {
     res.status(404).send("sorry can't find that!")
