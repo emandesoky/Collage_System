@@ -101,18 +101,11 @@ app.get("/display_course", (req, res) => {
   res.render("display_course")
 });
 
-
-
-
 ///404 error
 app.use((req, res) => {
     res.status(404).send("sorry can't find that!")
 });
   
-
-
-
-
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
 })
