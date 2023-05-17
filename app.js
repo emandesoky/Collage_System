@@ -1,6 +1,23 @@
 const express = require('express')
+const multer  = require('multer')
+
 const app = express()
 const port = 3000
+
+///upload files
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+      cb(null,'uploads/')
+  },
+filename:function(req,file,cb){
+cb(null, Date.now() + path.extname(file.originalname));
+}
+}) 
+const upload = multer({ storage })
+
+app.set('view engine', 'ejs')
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: false }));
 
 ///connection with mysql database
 const mysql = require('mysql');
@@ -35,8 +52,13 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 }); 
 
-app.set('view engine', 'ejs')
-app.use(express.static('public'))
+// upload files
+app.post('/upload', upload.single('filename'),(req, res) => {
+  console.log(req.body);
+  console.log(req.file);
+  return res.redirect('/')
+
+})
 
 //viewsبتعامل كان انا واقف داخل فولدر 
 app.get("/", (req, res) => {
@@ -78,6 +100,8 @@ app.get("/absence", (req, res) => {
 app.get("/display_course", (req, res) => {
   res.render("display_course")
 });
+
+
 
 
 ///404 error
