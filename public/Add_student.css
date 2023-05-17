@@ -14,7 +14,7 @@ body {
     background-size: cover;
     background-position: center;
     width: 200wh;
-    height: 100vh;
+    height: auto;
     /* padding-top: 10px; */
 }
 
